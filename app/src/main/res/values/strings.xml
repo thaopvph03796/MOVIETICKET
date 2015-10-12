@@ -3,45 +3,4 @@
     <string name="action_settings">Settings</string>
     <color name="red">#FF0000</color>
 
-    <!--Đăng nhập-->
-    <string name="tendangnhap">Tên đăng nhập</string>
-    <string name="matkhau">Mật khẩu</string>
-    <string name="dangky">Đăng ký</string>
-    <string name="quenmatkhau">Quên mật khẩu</string>
-    <string name="dangnhap">Đăng nhập</string>
-    <string name="mabimat">Mã số bí mật</string>
-
-    <!--Quên mật khẩu-->
-    <string name="matkhaumoi">Mật khẩu mới</string>
-    <string name="nhaplaimatkhau">Nhập lại mật khẩu</string>
-    <string name="taomatkhau">Tạo mật khẩu</string>
-
-    <!--Đăng ký-->
-    <string name="xoatrang">Xóa trắng</string>
-    <string name="luuy">Lưu ý: Mã số này được dùng để khôi phục mật khẩu!</string>
-
-    <!--Giới thiệu-->
-    <string name="tenungdung">Tên ứng dụng:</string>
-    <string name="phienban">Phiên bản:</string>
-    <string name="version">Version 2015</string>
-    <string name="thietkeboi">Thiết kế bởi:</string>
-    <string name="designer">Lê Công Long Vũ</string>
-    <string name="masinhvien">Mã sinh viên:</string>
-    <string name="mssv">PH03762</string>
-    <string name="lop">Lớp:</string>
-    <string name="tenlop">PT10352</string>
-
-    <!--Giao dịch-->
-    <string name="taikhoan">Tài khoản</string>
-    <string name="loaigiaodich">Loại giao dịch</string>
-    <string name="sotien">Số tiền</string>
-    <string name="nhapsotien">Nhập số tiền</string>
-    <string name="lydo">Lý do</string>
-    <string name="nhaplydo">Nhập lý do</string>
-    <string name="phannhom">Phân nhóm</string>
-    <string name="trangthai">Trạng thái giao dịch</string>
-    <string name="ngaygiaodich">Ngày giao dịch</string>
-    <string name="hientai">Hiện tại</string>
-    <string name="luu">Lưu</string>
-    <string name="luuvadong">Lưu &amp; Đóng</string>
 </resources>
