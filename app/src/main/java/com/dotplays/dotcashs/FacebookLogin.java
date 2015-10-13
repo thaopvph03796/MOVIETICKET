@@ -37,9 +37,15 @@ public class FacebookLogin extends Fragment {
     }
 
     public void checkFacebookLogged() {
-        if (AccessToken.getCurrentAccessToken() != null && com.facebook.Profile.getCurrentProfile() != null){
-            startActivity();
-        }
+        AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
+            @Override
+            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+                AccessToken accessToken = AccessToken.getCurrentAccessToken();
+                if (accessToken != null) {
+                    startActivity();
+                }
+            }
+        };
     }
 
     public void loginFacebook(View v) {
