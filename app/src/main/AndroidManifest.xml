@@ -29,13 +29,8 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:label="@string/app_name" />
 
-
         <activity
             android:name=".GiaodienActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".GiaodichActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"></activity>
     </application>
