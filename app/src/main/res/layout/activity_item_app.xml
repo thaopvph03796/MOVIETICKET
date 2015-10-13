@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ECECEC"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@mipmap/item_app"
+            android:id="@+id/imageItem"
+            android:layout_alignTop="@+id/txtNameApp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Ứng Dụng"
+            android:textSize="17sp"
+            android:textColor="#333339"
+            android:id="@+id/txtNameApp"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageItem"
+            android:layout_toEndOf="@+id/imageItem" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt và sử dụng"
+            android:textColor="#FF0000"
+            android:id="@+id/textView2"
+            android:layout_marginTop="22dp"
+            android:textStyle="italic"
+            android:layout_below="@+id/txtNameApp"
+            android:layout_alignLeft="@+id/txtNameApp"
+            android:layout_alignStart="@+id/txtNameApp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Tiền"
+            android:id="@+id/txtSotien"
+            android:layout_below="@+id/txtNameApp"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:background="@mipmap/btn_download"
+            android:id="@+id/btnCaidat"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</LinearLayout>
