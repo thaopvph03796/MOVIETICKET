@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.dotplays.dotcashs.R;
@@ -18,24 +19,22 @@ public class ThuchiFragment extends Fragment {
         return inflater.inflate(R.layout.activity_thuchi, container, false);
     }
 
+    Button btn;
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        getActivity().findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        btn=(Button)getActivity().findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean installed = appInstalledOrNot("com.google.android.youtube");
-                MSG("com.google.android.youtube");
                 if(installed) {
                     //This intent will help you to launch if the package is already installed
                     MSG("Ứng dụng này đã cài tên máy");
                     Intent LaunchIntent = getActivity().getPackageManager()
                             .getLaunchIntentForPackage("com.google.android.youtube");
                     startActivity(LaunchIntent);
-
-
                 } else {
-
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse("details?id=com.google.android.youtube"));
                     try{
