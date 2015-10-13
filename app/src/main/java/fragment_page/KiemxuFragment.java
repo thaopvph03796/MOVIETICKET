@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import adapter.AdapterIteamApp;
 import model.ModelIteamApp;
 
-public class ThuchiFragment extends Fragment {
+public class KiemxuFragment extends Fragment {
     private Activity activity;
     private ArrayList<ModelIteamApp> arrayList;
     private AdapterIteamApp adapterIteamApp;
