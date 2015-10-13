@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -31,12 +31,12 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -47,7 +47,7 @@
     <color name="design_fab_stroke_top_outer_color">#2EFFFFFF</color>
     <color name="design_snackbar_background_color">#323232</color>
     <color name="design_textinput_error_color">#FFDD2C00</color>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -79,10 +79,10 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <color name="red">#FF0000</color>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="ripple_material_dark">#42ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
@@ -194,11 +194,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_fab_border_width">0.5dp</dimen>
@@ -226,7 +226,7 @@
     <dimen name="design_snackbar_text_size">14sp</dimen>
     <dimen name="design_tab_max_width">264dp</dimen>
     <dimen name="design_tab_min_width">72dp</dimen>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -234,10 +234,10 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="fab_margin">16dp</dimen>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
@@ -255,19 +255,19 @@
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <item name="view_offset_helper" type="id"/>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="design_snackbar_text_max_lines">2</integer>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -287,59 +287,21 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Dotcashs</string>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="dangky">Đăng ký</string>
-    <string name="dangnhap">Đăng nhập</string>
-    <string name="designer">Lê Công Long Vũ</string>
-    <string name="hientai">Hiện tại</string>
-    <string name="loaigiaodich">Loại giao dịch</string>
-    <string name="lop">Lớp:</string>
-    <string name="luu">Lưu</string>
-    <string name="luuvadong">Lưu &amp; Đóng</string>
-    <string name="luuy">Lưu ý: Mã số này được dùng để khôi phục mật khẩu!</string>
-    <string name="lydo">Lý do</string>
-    <string name="mabimat">Mã số bí mật</string>
-    <string name="masinhvien">Mã sinh viên:</string>
-    <string name="matkhau">Mật khẩu</string>
-    <string name="matkhaumoi">Mật khẩu mới</string>
-    <string name="mssv">PH03762</string>
-    <string name="ngaygiaodich">Ngày giao dịch</string>
-    <string name="nhaplaimatkhau">Nhập lại mật khẩu</string>
-    <string name="nhaplydo">Nhập lý do</string>
-    <string name="nhapsotien">Nhập số tiền</string>
-    <string name="phannhom">Phân nhóm</string>
-    <string name="phienban">Phiên bản:</string>
-    <string name="quenmatkhau">Quên mật khẩu</string>
-    <string name="sotien">Số tiền</string>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="taikhoan">Tài khoản</string>
-    <string name="taomatkhau">Tạo mật khẩu</string>
-    <string name="tendangnhap">Tên đăng nhập</string>
-    <string name="tenlop">PT10352</string>
-    <string name="tenungdung">Tên ứng dụng:</string>
-    <string name="thietkeboi">Thiết kế bởi:</string>
-    <string name="trangthai">Trạng thái giao dịch</string>
-    <string name="version">Version 2015</string>
-    <string name="xoatrang">Xóa trắng</string>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
-    <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -353,7 +315,7 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1268,7 +1230,7 @@
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
     </style>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
         <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
@@ -1280,37 +1242,7 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/styles.xml -->
-    <eat-comment/>
-    <style name="ButtonGiaodich">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#FFFF</item>
-    </style>
-    <style name="ButtonThongKe">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">44dp</item>
-        <item name="android:background">@null</item>
-        <item name="android:drawableRight">@mipmap/down_icon</item>
-        <item name="android:gravity">left|center_vertical</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-    </style>
-    <style name="EditTextGiaodich">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="colorControlNormal">#CCCC</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
-        <item name="android:singleLine">true</item>
-    </style>
-    <style name="ListviewThongKe">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:scrollbars">none</item>
-        <item name="android:layout_marginTop">8dp</item>
-    </style>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1452,24 +1384,6 @@
     <style name="RtlOverlay.Widget.AppCompat.SearchView.MagIcon" parent="android:Widget">
         <item name="android:layout_marginLeft">@dimen/abc_dropdownitem_text_padding_left</item>
     </style>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/styles.xml -->
-    <eat-comment/>
-    <style name="SpinnerGiaodich">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
-    </style>
-    <style name="TabStrip">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:textColor">#FFFF</item>
-        <item name="android:background">?attr/colorPrimary</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-    </style>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
-    <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.AppCompat.Body2" parent="Base.TextAppearance.AppCompat.Body2"/>
@@ -1526,7 +1440,7 @@
     </style>
     <style name="TextAppearance.AppCompat.Widget.Switch" parent="Base.TextAppearance.AppCompat.Widget.Switch"/>
     <style name="TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"/>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="TextAppearance.AppCompat.Display1">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
@@ -1546,7 +1460,7 @@
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="textAllCaps">true</item>
     </style>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.StatusBar.EventContent" parent=""/>
     <style name="TextAppearance.StatusBar.EventContent.Info" parent=""/>
@@ -1559,17 +1473,12 @@
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
     </style>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="TextThongtin">
         <item name="android:padding">8dp</item>
     </style>
-    <style name="TextViewGiaodich">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textAppearance">?android:textAppearanceMedium</item>
-    </style>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>
@@ -1598,7 +1507,7 @@
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/D:/Dotcashs2/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/Project/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="Toolbar">
         <item name="android:layout_width">match_parent</item>
@@ -1611,15 +1520,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
-    <style name="WhiteBackground">
-        <item name="android:background">#FFFF</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-    </style>
     <style name="WhiteText">
         <item name="android:textColor">#FFFF</item>
     </style>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -1712,7 +1616,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/D:/Dotcashs2/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
+    <!-- From: file:/D:/Project/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.Design.AppBarLayout" parent="android:Widget">
         <item name="elevation">@dimen/design_appbar_elevation</item>
