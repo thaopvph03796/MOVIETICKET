@@ -82,7 +82,6 @@
             android:layout_height="40dp"
             android:layout_margin="10dp"
             android:drawableLeft="@mipmap/facebook_icon"
-            android:background="@drawable/giaodich_logout_facebook"
             android:gravity="center"
             android:text="@string/logout"
             android:textColor="#FFFF" />
