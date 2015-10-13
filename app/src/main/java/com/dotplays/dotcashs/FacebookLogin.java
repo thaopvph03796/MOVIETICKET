@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -30,6 +32,20 @@ public class FacebookLogin extends Fragment {
         View v = inflater.inflate(R.layout.activity_login_facebook, container, false);
         loginFacebook(v);
         return v;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        checkFacebookLogged();
+    }
+
+    public void checkFacebookLogged() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken != null) {
+            Intent intent = new Intent(getActivity(), GiaodienActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void loginFacebook(View v) {
