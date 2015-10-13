@@ -40,6 +40,7 @@ public class ThuchiFragment extends Fragment {
         imgDown = (ImageView) activity.findViewById(R.id.imageItem);
         setListview();
         // Không khai báo sự kiện onclick ở đây. Vũ
+        // OK thằng onclick cho từng image rồi. check thử xem. chú ý cái số đằng sau Toast
     }
     public void setListview() {
         lv = (ListView) activity.findViewById(R.id.lv);

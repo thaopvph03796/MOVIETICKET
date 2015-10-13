@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import fragment_page.CaidatFragment;
 import fragment_page.DoiquaFragment;
-import fragment_page.KiẽmuFragment;
+import fragment_page.ThuchiFragment;
 
 public class AdapterGiaodien extends FragmentPagerAdapter {
     private String matk;
@@ -20,7 +20,7 @@ public class AdapterGiaodien extends FragmentPagerAdapter {
     public Fragment getItem(int i) {
         switch (i) {
             case 0:
-                return new KiẽmuFragment();
+                return new ThuchiFragment();
             case 1:
                 return new DoiquaFragment();
             case 2:
