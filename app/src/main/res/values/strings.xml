@@ -5,5 +5,5 @@
 
     <!--Login Facebook-->
     <string name="facebook_id">1472463013084207</string>
-
+    <string name="logout">Đăng xuất</string>
 </resources>
