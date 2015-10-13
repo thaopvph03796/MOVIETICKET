@@ -9,12 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -84,27 +86,10 @@ public class GiaodienActivity extends AppCompatActivity {
     }
 
     public void setLoginButton() {
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        callbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button_giaodien);
-        loginButton.setReadPermissions("user_friends");
-        // Other app specific specialization
-        // Callback registration
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        findViewById(R.id.giaodien_logout).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(LoginResult loginResult) {
-                setResult(1);
-                finish();
-            }
-
-            @Override
-            public void onCancel() {
-                setResult(1);
-                finish();
-            }
-
-            @Override
-            public void onError(FacebookException exception) {
+            public void onClick(View v) {
+                LoginManager.getInstance().logOut();
                 setResult(1);
                 finish();
             }

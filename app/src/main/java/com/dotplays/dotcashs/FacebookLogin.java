@@ -84,7 +84,7 @@ public class FacebookLogin extends Fragment {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 2) {
             if (resultCode == 0) {
-                System.exit(0);
+                getActivity().finish();
             }
         }
     }
