@@ -1,5 +1,6 @@
 package com.dotplays.dotcashs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -10,6 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+
 import adapter.AdapterGiaodien;
 
 public class GiaodienActivity extends AppCompatActivity {
@@ -19,6 +27,7 @@ public class GiaodienActivity extends AppCompatActivity {
     private TabLayout tablayout;
     private ViewPager viewPager;
     private AdapterGiaodien adapterGiaodich;
+    private CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,7 @@ public class GiaodienActivity extends AppCompatActivity {
         setTablayout();
         setViewPager();
         addEventTab();
+        setLoginButton();
     }
 
     public void setActionBar() {
@@ -98,6 +108,39 @@ public class GiaodienActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+    }
+
+    public void setLoginButton() {
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button_giaodien);
+        loginButton.setReadPermissions("user_friends");
+        // Other app specific specialization
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                setResult(1);
+                finish();
+            }
+
+            @Override
+            public void onCancel() {
+                setResult(1);
+                finish();
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                setResult(1);
+                finish();
+            }
+        });
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

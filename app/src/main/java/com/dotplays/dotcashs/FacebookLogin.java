@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -25,6 +26,7 @@ public class FacebookLogin extends Fragment {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getActivity().getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
+        checkFacebookLogged();
     }
 
     @Override
@@ -34,17 +36,9 @@ public class FacebookLogin extends Fragment {
         return v;
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        checkFacebookLogged();
-    }
-
     public void checkFacebookLogged() {
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        if (accessToken != null) {
-            Intent intent = new Intent(getActivity(), GiaodienActivity.class);
-            startActivity(intent);
+        if (AccessToken.getCurrentAccessToken() != null && com.facebook.Profile.getCurrentProfile() != null){
+            startActivity();
         }
     }
 
@@ -58,8 +52,7 @@ public class FacebookLogin extends Fragment {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Intent intent = new Intent(getActivity(), GiaodienActivity.class);
-                startActivity(intent);
+                startActivity();
             }
 
             @Override
@@ -74,9 +67,19 @@ public class FacebookLogin extends Fragment {
         });
     }
 
+    public void startActivity() {
+        Intent intent = new Intent(getActivity(), GiaodienActivity.class);
+        startActivityForResult(intent, 2);
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 2) {
+            if (resultCode == 0) {
+                System.exit(0);
+            }
+        }
     }
 }
