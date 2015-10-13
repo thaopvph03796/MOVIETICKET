@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <color name="red">#FF0000</color>
 
+    <!--Login Facebook-->
+    <string name="facebook_id">1472463013084207</string>
+
 </resources>
