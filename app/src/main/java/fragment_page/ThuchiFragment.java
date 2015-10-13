@@ -39,30 +39,7 @@ public class ThuchiFragment extends Fragment {
         activity = getActivity();
         imgDown = (ImageView) activity.findViewById(R.id.imageItem);
         setListview();
-        // Chỗ này bị lỗi
-//        imgDown.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                boolean installed = appInstalledOrNot("com.google.android.youtube");
-//                if(installed) {
-//                    //This intent will help you to launch if the package is already installed
-//                    MSG("Ứng dụng này đã cài tên máy");
-//                    Intent LaunchIntent = getActivity().getPackageManager()
-//                            .getLaunchIntentForPackage("com.google.android.youtube");
-//                    startActivity(LaunchIntent);
-//                } else {
-//                    Intent intent = new Intent(Intent.ACTION_VIEW);
-//                    intent.setData(Uri.parse("details?id=com.google.android.youtube"));
-//                    try{
-//                        MSG("Ứng dụng này CHƯA cài tên máy");
-//                        startActivity(intent);
-//                    }
-//                    catch(Exception e){
-//                        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.youtube"));
-//                    }
-//                }
-//            }
-//        });
+        // Không khai báo sự kiện onclick ở đây. Vũ
     }
     public void setListview() {
         lv = (ListView) activity.findViewById(R.id.lv);
@@ -71,20 +48,5 @@ public class ThuchiFragment extends Fragment {
         arrayList.add(new ModelIteamApp("Zalo", 3000));
         adapterIteamApp = new AdapterIteamApp(getActivity(), R.layout.activity_item_app, arrayList);
         lv.setAdapter(adapterIteamApp);
-    }
-    private boolean appInstalledOrNot(String uri) {
-        PackageManager pm = getContext().getPackageManager();
-        boolean app_installed;
-        try {
-            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
-            app_installed = true;
-        }
-        catch (PackageManager.NameNotFoundException e) {
-            app_installed = false;
-        }
-        return app_installed;
-    }
-    public void MSG(String a){
-        Toast.makeText(getActivity(), a, Toast.LENGTH_LONG).show();
     }
 }
