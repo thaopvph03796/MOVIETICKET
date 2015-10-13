@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,7 +35,7 @@ public class DoiquaFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         a = getActivity();
         setListview();
-//        addEvent();
+        addEvent();
     }
 
     public void setListview() {
@@ -47,15 +48,14 @@ public class DoiquaFragment extends Fragment {
         lv.setAdapter(adapter);
     }
 
-//    public void addEvent() {
-//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                LayoutInflater inflater = (LayoutInflater) a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//                View v = inflater.inflate(R.layout.activity_giaodien, null);
-//                TextView count = (TextView) v.findViewById(R.id.txt_giaodien_money_count);
-//                count.setText("OK");
-//            }
-//        });
-//    }
+    public void addEvent() {
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView txt = (TextView) a.findViewById(R.id.txt_giaodien_money_count);
+                int so = Integer.parseInt(txt.getText().toString()) + 1;
+                txt.setText(String.valueOf(so));
+            }
+        });
+    }
 }
