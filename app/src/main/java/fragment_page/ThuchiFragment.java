@@ -1,5 +1,6 @@
 package fragment_page;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -9,11 +10,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.dotplays.dotcashs.R;
 
+import java.util.ArrayList;
+
+import adapter.AdapterIteamApp;
+import model.ModelIteamApp;
+
 public class ThuchiFragment extends Fragment {
+    private Activity activity;
+    private ArrayList<ModelIteamApp> arrayList;
+    private AdapterIteamApp adapterIteamApp;
+    private ListView lv;
+    private ImageView imgDown;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_thuchi, container, false);
@@ -23,8 +36,10 @@ public class ThuchiFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        btn=(Button)getActivity().findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
+        activity = getActivity();
+        imgDown = (ImageView) activity.findViewById(R.id.imageItem);
+        setListview();
+        imgDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean installed = appInstalledOrNot("com.google.android.youtube");
@@ -49,7 +64,14 @@ public class ThuchiFragment extends Fragment {
         });
 
     }
-
+    public void setListview() {
+        lv = (ListView) activity.findViewById(R.id.lv);
+        arrayList = new ArrayList<ModelIteamApp>();
+        arrayList.add(new ModelIteamApp("Facebook", 2000));
+        arrayList.add(new ModelIteamApp("Zalo", 3000));
+        adapterIteamApp = new AdapterIteamApp(getActivity(), R.layout.activity_item_app, arrayList);
+        lv.setAdapter(adapterIteamApp);
+    }
     private boolean appInstalledOrNot(String uri) {
         PackageManager pm = getContext().getPackageManager();
         boolean app_installed;
