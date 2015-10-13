@@ -39,30 +39,30 @@ public class ThuchiFragment extends Fragment {
         activity = getActivity();
         imgDown = (ImageView) activity.findViewById(R.id.imageItem);
         setListview();
-        imgDown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean installed = appInstalledOrNot("com.google.android.youtube");
-                if(installed) {
-                    //This intent will help you to launch if the package is already installed
-                    MSG("Ứng dụng này đã cài tên máy");
-                    Intent LaunchIntent = getActivity().getPackageManager()
-                            .getLaunchIntentForPackage("com.google.android.youtube");
-                    startActivity(LaunchIntent);
-                } else {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("details?id=com.google.android.youtube"));
-                    try{
-                        MSG("Ứng dụng này CHƯA cài tên máy");
-                        startActivity(intent);
-                    }
-                    catch(Exception e){
-                        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.youtube"));
-                    }
-                }
-            }
-        });
-
+        // Chỗ này bị lỗi
+//        imgDown.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                boolean installed = appInstalledOrNot("com.google.android.youtube");
+//                if(installed) {
+//                    //This intent will help you to launch if the package is already installed
+//                    MSG("Ứng dụng này đã cài tên máy");
+//                    Intent LaunchIntent = getActivity().getPackageManager()
+//                            .getLaunchIntentForPackage("com.google.android.youtube");
+//                    startActivity(LaunchIntent);
+//                } else {
+//                    Intent intent = new Intent(Intent.ACTION_VIEW);
+//                    intent.setData(Uri.parse("details?id=com.google.android.youtube"));
+//                    try{
+//                        MSG("Ứng dụng này CHƯA cài tên máy");
+//                        startActivity(intent);
+//                    }
+//                    catch(Exception e){
+//                        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.youtube"));
+//                    }
+//                }
+//            }
+//        });
     }
     public void setListview() {
         lv = (ListView) activity.findViewById(R.id.lv);
