@@ -54,9 +54,9 @@ public class GiaodienActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
         tablayout = (TabLayout) findViewById(R.id.tablayout);
-        tablayout.addTab(tablayout.newTab().setIcon(R.mipmap.money_white));
-        tablayout.addTab(tablayout.newTab().setIcon(R.mipmap.statistical_grey));
-        tablayout.addTab(tablayout.newTab().setIcon(R.mipmap.setting_grey));
+        tablayout.addTab(tablayout.newTab().setText("Kiếm xu"));
+        tablayout.addTab(tablayout.newTab().setText("Đổi quà"));
+        tablayout.addTab(tablayout.newTab().setText("Tạm vậy"));
     }
 
     public void setViewPager() {
@@ -70,38 +70,11 @@ public class GiaodienActivity extends AppCompatActivity {
         tablayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                switch (tab.getPosition()) {
-                    case 0:
-                        getSupportActionBar().setTitle("Thu chi");
-                        tablayout.getTabAt(0).setIcon(R.mipmap.money_white);
-                        viewPager.setCurrentItem(0);
-                        break;
-                    case 1:
-                        getSupportActionBar().setTitle("Thống kê");
-                        tablayout.getTabAt(1).setIcon(R.mipmap.statistical_white);
-                        viewPager.setCurrentItem(1);
-                        break;
-                    case 2:
-                        getSupportActionBar().setTitle("Cài đặt");
-                        tablayout.getTabAt(2).setIcon(R.mipmap.setting_white);
-                        viewPager.setCurrentItem(2);
-                        break;
-                }
+                viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                switch (tab.getPosition()) {
-                    case 0:
-                        tablayout.getTabAt(0).setIcon(R.mipmap.money_grey);
-                        break;
-                    case 1:
-                        tablayout.getTabAt(1).setIcon(R.mipmap.statistical_grey);
-                        break;
-                    case 2:
-                        tablayout.getTabAt(2).setIcon(R.mipmap.setting_grey);
-                        break;
-                }
             }
 
             @Override
