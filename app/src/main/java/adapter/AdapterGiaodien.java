@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import fragment_page.CaidatFragment;
-import fragment_page.ThongkeFragment;
+import fragment_page.DoiquaFragment;
 import fragment_page.ThuchiFragment;
 
 public class AdapterGiaodien extends FragmentPagerAdapter {
@@ -22,7 +22,7 @@ public class AdapterGiaodien extends FragmentPagerAdapter {
             case 0:
                 return new ThuchiFragment();
             case 1:
-                return new ThongkeFragment();
+                return new DoiquaFragment();
             case 2:
                 return new CaidatFragment();
         }
