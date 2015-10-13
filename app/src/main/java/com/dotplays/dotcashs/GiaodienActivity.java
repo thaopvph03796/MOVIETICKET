@@ -3,15 +3,19 @@ package com.dotplays.dotcashs;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 
 import adapter.AdapterGiaodien;
 
 public class GiaodienActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
+    private LinearLayout linearLayout;
     private TabLayout tablayout;
     private ViewPager viewPager;
     private AdapterGiaodien adapterGiaodich;
@@ -33,10 +37,12 @@ public class GiaodienActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Thu chi");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.mipmap.menus_icon);
+        getSupportActionBar().setHomeAsUpIndicator(R.mipmap.menu_icon);
     }
 
     public void setTablayout() {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
+        linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
         tablayout = (TabLayout) findViewById(R.id.tablayout);
         tablayout.addTab(tablayout.newTab().setIcon(R.mipmap.money_white));
         tablayout.addTab(tablayout.newTab().setIcon(R.mipmap.statistical_grey));
@@ -102,6 +108,13 @@ public class GiaodienActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            if (drawerLayout.isDrawerOpen(linearLayout)) {
+                drawerLayout.closeDrawer(linearLayout);
+            } else {
+                drawerLayout.openDrawer(linearLayout);
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 }
