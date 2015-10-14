@@ -67,7 +67,7 @@ public class AdapterIteamApp extends ArrayAdapter<ModelIteamApp> {
         name.setText(arrItem.get(position).getNameapp());
         sotien.setText("+2000");
         imgItem.setBackgroundResource(R.mipmap.item_app);
-        imgItem.setOnClickListener(new View.OnClickListener() {
+        btnCaidat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean installed = appInstalledOrNot("com.google.android.youtube");
