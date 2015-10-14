@@ -31,6 +31,7 @@ public class GiaodienActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private AdapterGiaodien adapterGiaodich;
     private TextView username;
+    private CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,7 @@ public class GiaodienActivity extends AppCompatActivity {
     public void setDrawerLayout() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
-        username = (TextView) findViewById(R.id.txt_giaodien_username);
+//        username = (TextView) findViewById(R.id.txt_giaodien_username);
 //        String name = getIntent().getStringExtra("name");
 //        username.setText(name);
     }
@@ -121,5 +122,11 @@ public class GiaodienActivity extends AppCompatActivity {
             }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 }

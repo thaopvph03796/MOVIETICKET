@@ -1,13 +1,11 @@
 package com.dotplays.dotcashs;
 
 import android.content.Intent;
-import android.content.pm.PackageInstaller;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
@@ -15,15 +13,12 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.Profile;
-import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 public class FacebookLogin extends Fragment {
     private LoginButton loginButton;
     private CallbackManager callbackManager;
-    private Profile profile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,16 +73,7 @@ public class FacebookLogin extends Fragment {
     }
 
     public void startActivity() {
-//        final String[] name = new String[0];
-//        ProfileTracker profiletracker = new ProfileTracker() {
-//            @Override
-//            protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
-//                name[0] = currentProfile.getName();
-//            }
-//        };
         Intent intent = new Intent(getActivity(), GiaodienActivity.class);
-//        intent.putExtra("name", name[0]);
-//        Toast.makeText(getContext(), name[0], Toast.LENGTH_SHORT).show();
         startActivityForResult(intent, 2);
     }
 

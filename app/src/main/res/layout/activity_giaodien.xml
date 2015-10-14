@@ -73,7 +73,6 @@
                     android:textAppearance="?android:textAppearance" />
 
                 <TextView
-                    android:id="@+id/txt_giaodien_username"
                     style="@style/WhiteText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
