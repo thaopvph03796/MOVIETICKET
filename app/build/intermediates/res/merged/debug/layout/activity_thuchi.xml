@@ -3,5 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" />
 </LinearLayout><!-- From: file:/D:/Project/app/src/main/res/layout/activity_thuchi.xml -->
