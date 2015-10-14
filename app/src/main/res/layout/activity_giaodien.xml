@@ -21,7 +21,7 @@
                 android:background="@drawable/giaodien_background_moneycount"
                 android:drawableLeft="@mipmap/circle_icon"
                 android:drawablePadding="5dp"
-                android:paddingRight="8dp"
+                android:paddingRight="15dp"
                 android:text="0"
                 android:textColor="#FFFF" />
         </android.support.v7.widget.Toolbar>
