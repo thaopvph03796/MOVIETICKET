@@ -1,6 +1,7 @@
 package com.dotplays.dotcashs;
 
 import android.content.Intent;
+import android.content.pm.PackageInstaller;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,12 +15,14 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 public class FacebookLogin extends Fragment {
     private LoginButton loginButton;
     private CallbackManager callbackManager;
+    private Profile profile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

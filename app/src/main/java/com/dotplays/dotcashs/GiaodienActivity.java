@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -29,7 +30,7 @@ public class GiaodienActivity extends AppCompatActivity {
     private TabLayout tablayout;
     private ViewPager viewPager;
     private AdapterGiaodien adapterGiaodich;
-    private CallbackManager callbackManager;
+    private TextView username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +38,11 @@ public class GiaodienActivity extends AppCompatActivity {
         setContentView(R.layout.activity_giaodien);
         setResult(0);
         setActionBar();
+        setDrawerLayout();
         setTablayout();
         setViewPager();
         addEventTab();
-        setLoginButton();
+        setLogoutButton();
     }
 
     public void setActionBar() {
@@ -52,9 +54,13 @@ public class GiaodienActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.mipmap.menu_icon);
     }
 
-    public void setTablayout() {
+    public void setDrawerLayout() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
+        username = (TextView) findViewById(R.id.txt_giaodien_username);
+    }
+
+    public void setTablayout() {
         tablayout = (TabLayout) findViewById(R.id.tablayout);
         tablayout.addTab(tablayout.newTab().setText("Kiếm xu"));
         tablayout.addTab(tablayout.newTab().setText("Đổi quà"));
@@ -85,8 +91,8 @@ public class GiaodienActivity extends AppCompatActivity {
         });
     }
 
-    public void setLoginButton() {
-        findViewById(R.id.giaodien_logout).setOnClickListener(new View.OnClickListener() {
+    public void setLogoutButton() {
+        findViewById(R.id.btn_giaodien_logout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginManager.getInstance().logOut();
@@ -94,11 +100,6 @@ public class GiaodienActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
