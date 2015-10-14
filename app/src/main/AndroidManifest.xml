@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".FacebookKey"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -28,9 +29,6 @@
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:label="@string/app_name" />
-        <provider android:authorities="com.facebook.app.FacebookContentProvider1234"
-            android:name="com.facebook.FacebookContentProvider"
-            android:exported="true" />
 
         <activity
             android:name=".GiaodienActivity"
