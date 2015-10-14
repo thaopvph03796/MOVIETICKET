@@ -58,6 +58,8 @@ public class GiaodienActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
         username = (TextView) findViewById(R.id.txt_giaodien_username);
+//        String name = getIntent().getStringExtra("name");
+//        username.setText(name);
     }
 
     public void setTablayout() {
@@ -65,6 +67,7 @@ public class GiaodienActivity extends AppCompatActivity {
         tablayout.addTab(tablayout.newTab().setText("Kiếm xu"));
         tablayout.addTab(tablayout.newTab().setText("Đổi quà"));
         tablayout.addTab(tablayout.newTab().setText("Tạm vậy"));
+        tablayout.setSelectedTabIndicatorHeight(7);
     }
 
     public void setViewPager() {

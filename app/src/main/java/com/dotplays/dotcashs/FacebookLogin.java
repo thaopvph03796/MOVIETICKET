@@ -16,6 +16,7 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.Profile;
+import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -77,7 +78,16 @@ public class FacebookLogin extends Fragment {
     }
 
     public void startActivity() {
+//        final String[] name = new String[0];
+//        ProfileTracker profiletracker = new ProfileTracker() {
+//            @Override
+//            protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
+//                name[0] = currentProfile.getName();
+//            }
+//        };
         Intent intent = new Intent(getActivity(), GiaodienActivity.class);
+//        intent.putExtra("name", name[0]);
+//        Toast.makeText(getContext(), name[0], Toast.LENGTH_SHORT).show();
         startActivityForResult(intent, 2);
     }
 
