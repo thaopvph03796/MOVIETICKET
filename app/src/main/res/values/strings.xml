@@ -5,6 +5,11 @@
 
     <!--Main Activity-->
     <string name="welcome_name">Tải App - Nhận tiền</string>
+    <string name="search_internet">Searching internet...</string>
+    <string name="thong_bao">THÔNG BÁO</string>
+    <string name="loi_ket_noi">Lỗi kết nối. Vui lòng tải lại</string>
+    <string name="ok">OK</string>
+    <string name="thoat">Thoát</string>
 
     <!--Login Facebook-->
     <string name="facebook_id">527379070761098</string>
@@ -12,4 +17,6 @@
 
     <!--Color-->
     <color name="app_color">#84BF22</color>
+    <color name="blue">#026CC4</color>
+    <color name="white">#FFFF</color>
 </resources>
