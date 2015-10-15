@@ -3,7 +3,13 @@
     <string name="action_settings">Settings</string>
     <color name="red">#FF0000</color>
 
+    <!--Main Activity-->
+    <string name="welcome_name">Tải App - Nhận tiền</string>
+
     <!--Login Facebook-->
     <string name="facebook_id">527379070761098</string>
     <string name="logout">Đăng xuất</string>
+
+    <!--Color-->
+    <color name="app_color">#84BF22</color>
 </resources>
