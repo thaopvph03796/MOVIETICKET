@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_internet_again"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/thong_bao"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/loi_ket_noi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/btn_main_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@null"
+            android:textColor="@color/app_color"
+            android:text="@string/ok" />
+
+        <Button
+            android:id="@+id/btn_main_thoat"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@null"
+            android:textColor="@color/blue"
+            android:text="@string/thoat" />
+    </LinearLayout>
+
+</LinearLayout>
