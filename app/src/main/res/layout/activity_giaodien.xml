@@ -20,8 +20,8 @@
                 android:layout_marginRight="8dp"
                 android:background="@drawable/giaodien_background_moneycount"
                 android:drawableLeft="@mipmap/circle_icon"
-                android:drawablePadding="5dp"
-                android:paddingRight="15dp"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
                 android:text="0"
                 android:textColor="#FFFF" />
         </android.support.v7.widget.Toolbar>
@@ -44,13 +44,9 @@
         android:orientation="vertical">
 
         <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/navigation_icon" />
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/navigation_icon">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -60,12 +56,14 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_giaodien_image"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginBottom="35dp"
                     android:src="@mipmap/navigation_logo_2" />
 
                 <TextView
+                    android:id="@+id/txt_giaodien_id"
                     style="@style/WhiteText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,6 +71,7 @@
                     android:textAppearance="?android:textAppearance" />
 
                 <TextView
+                    android:id="@+id/txt_giaodien_username"
                     style="@style/WhiteText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

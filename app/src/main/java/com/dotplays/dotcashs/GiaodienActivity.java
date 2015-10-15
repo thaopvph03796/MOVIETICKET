@@ -1,6 +1,7 @@
 package com.dotplays.dotcashs;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -10,16 +11,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 
 import adapter.AdapterGiaodien;
 
@@ -30,7 +29,8 @@ public class GiaodienActivity extends AppCompatActivity {
     private TabLayout tablayout;
     private ViewPager viewPager;
     private AdapterGiaodien adapterGiaodich;
-    private TextView username;
+    private ImageView userimg;
+    private TextView username, id;
     private CallbackManager callbackManager;
 
     @Override
@@ -58,9 +58,15 @@ public class GiaodienActivity extends AppCompatActivity {
     public void setDrawerLayout() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
-//        username = (TextView) findViewById(R.id.txt_giaodien_username);
-//        String name = getIntent().getStringExtra("name");
-//        username.setText(name);
+        userimg = (ImageView) findViewById(R.id.img_giaodien_image);
+        id = (TextView) findViewById(R.id.txt_giaodien_id);
+        username = (TextView) findViewById(R.id.txt_giaodien_username);
+        Profile profile = Profile.getCurrentProfile();
+        if (profile != null) {
+            userimg.setImageURI(profile.getProfilePictureUri(50, 50));
+            id.setText(profile.getId());
+            username.setText(profile.getName());
+        }
     }
 
     public void setTablayout() {
