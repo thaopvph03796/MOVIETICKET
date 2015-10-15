@@ -14,6 +14,7 @@
     <!--Login Facebook-->
     <string name="facebook_id">527379070761098</string>
     <string name="logout">Đăng xuất</string>
+    <string name="login">Đăng nhập</string>
 
     <!--Color-->
     <color name="app_color">#84BF22</color>
