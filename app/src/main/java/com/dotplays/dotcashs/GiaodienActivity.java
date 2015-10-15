@@ -39,7 +39,7 @@ public class GiaodienActivity extends AppCompatActivity {
         setContentView(R.layout.activity_giaodien);
         setResult(0);
         setActionBar();
-        setDrawerLayout();
+//        setDrawerLayout();
         setTablayout();
         setViewPager();
         addEventTab();
