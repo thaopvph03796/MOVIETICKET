@@ -103,7 +103,7 @@ public class GiaodienActivity extends AppCompatActivity {
         d.findViewById(R.id.btn_login_exit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                d.dismiss();
+                d.hide();
                 finish();
             }
         });
