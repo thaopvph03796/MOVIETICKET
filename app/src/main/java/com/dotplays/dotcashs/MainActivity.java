@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 if (networkInfo != null && networkInfo.isConnected()) {
                     Intent intent = new Intent(MainActivity.this, GiaodienActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     tryConnect();
                 }
