@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment"
+    android:name="com.dotplays.dotcashs.FacebookLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFF"
-    android:gravity="center"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:src="@mipmap/welcome_icon" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:gravity="center"
-        android:text="@string/welcome_name"
-        android:textSize="30sp"
-        android:textColor="@color/app_color" />
-
-</LinearLayout>
+    tools:layout="@layout/activity_facebook_login" />
