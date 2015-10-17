@@ -46,67 +46,13 @@ public class GiaodienActivity extends AppCompatActivity {
         setContentView(R.layout.activity_giaodien);
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
-        checkFacebookLogged();
+        setResult(0);
         setLogoutButton();
         setActionBar();
         setDrawerLayout();
         setTablayout();
         setViewPager();
         addEventTab();
-    }
-
-    // Kiểm tra máy đã login facebook chưa
-    public void checkFacebookLogged() {
-        AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
-            @Override
-            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
-                currentAccessToken = AccessToken.getCurrentAccessToken();
-                if (currentAccessToken == null) {
-                    loginFacebook();
-                }
-            }
-        };
-    }
-
-    // login Facebook
-    public void loginFacebook() {
-        final Dialog d = new Dialog(this);
-        d.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        d.setContentView(R.layout.activity_login_facebook);
-        d.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        d.setCancelable(false);
-        d.show();
-        LoginButton loginButton = (LoginButton) d.findViewById(R.id.login_button);
-        loginButton.setReadPermissions("user_friends");
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                id = (TextView) findViewById(R.id.txt_giaodien_id);
-                username = (TextView) findViewById(R.id.txt_giaodien_username);
-                Profile profile = Profile.getCurrentProfile();
-                if (profile != null) {
-                    userimg.setImageURI(profile.getProfilePictureUri(50, 50));
-                    id.setText(profile.getId());
-                    username.setText(profile.getName());
-                }
-                d.dismiss();
-            }
-
-            @Override
-            public void onCancel() {
-            }
-
-            @Override
-            public void onError(FacebookException exception) {
-            }
-        });
-        d.findViewById(R.id.btn_login_exit).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                d.hide();
-                finish();
-            }
-        });
     }
 
     // add sự kiện đăng xuất facebook
@@ -116,7 +62,8 @@ public class GiaodienActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LoginManager.getInstance().logOut();
                 drawerLayout.closeDrawer(linearLayout);
-                loginFacebook();
+                setResult(1);
+                finish();
             }
         });
     }
@@ -135,6 +82,14 @@ public class GiaodienActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
         userimg = (ImageView) findViewById(R.id.img_giaodien_image);
+        id = (TextView) findViewById(R.id.txt_giaodien_id);
+        username = (TextView) findViewById(R.id.txt_giaodien_username);
+        Profile profile = Profile.getCurrentProfile();
+        if (profile != null) {
+            userimg.setImageURI(profile.getProfilePictureUri(50, 50));
+            id.setText(profile.getId());
+            username.setText(profile.getName());
+        }
     }
 
     // set Taplayout
@@ -188,11 +143,5 @@ public class GiaodienActivity extends AppCompatActivity {
             }
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 }
