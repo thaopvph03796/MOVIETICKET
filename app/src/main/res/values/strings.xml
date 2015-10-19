@@ -20,4 +20,11 @@
     <color name="app_color">#84BF22</color>
     <color name="blue">#026CC4</color>
     <color name="white">#FFFF</color>
+
+    <!--Đổi quà-->
+    <string-array name="group_name">
+        <item>Thẻ Viettel</item>
+        <item>Thẻ Vinaphone</item>
+        <item>Thẻ Mobifone</item>
+    </string-array>
 </resources>

@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment"
     android:name="com.dotplays.dotcashs.FacebookLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/activity_login_facebook" /><!-- From: file:/D:/Project/app/src/main/res/layout/activity_main.xml -->
+    tools:layout="@layout/activity_facebook_login" /><!-- From: file:/D:/Project/app/src/main/res/layout/activity_main.xml -->

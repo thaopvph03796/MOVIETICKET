@@ -3,11 +3,14 @@ package com.dotplays.dotcashs;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +18,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
@@ -32,12 +36,12 @@ import adapter.AdapterGiaodien;
 public class GiaodienActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
-    private LinearLayout linearLayout;
+    private NavigationView navigationView;
     private TabLayout tablayout;
     private ViewPager viewPager;
     private AdapterGiaodien adapterGiaodich;
     private ImageView userimg;
-    private TextView username, id;
+    private TextView username, userid;
     private CallbackManager callbackManager;
 
     @Override
@@ -47,25 +51,11 @@ public class GiaodienActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         setResult(0);
-        setLogoutButton();
         setActionBar();
         setDrawerLayout();
         setTablayout();
         setViewPager();
         addEventTab();
-    }
-
-    // add sự kiện đăng xuất facebook
-    public void setLogoutButton() {
-        findViewById(R.id.btn_giaodien_logout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginManager.getInstance().logOut();
-                drawerLayout.closeDrawer(linearLayout);
-                setResult(1);
-                finish();
-            }
-        });
     }
 
     // set Toolbar
@@ -80,16 +70,34 @@ public class GiaodienActivity extends AppCompatActivity {
     // set sự kiện cho drawable và thông tin người dùng
     public void setDrawerLayout() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
-        linearLayout = (LinearLayout) findViewById(R.id.layoutGiaodien);
-        userimg = (ImageView) findViewById(R.id.img_giaodien_image);
-        id = (TextView) findViewById(R.id.txt_giaodien_id);
-        username = (TextView) findViewById(R.id.txt_giaodien_username);
+        navigationView = (NavigationView) findViewById(R.id.nav_giaodien);
         Profile profile = Profile.getCurrentProfile();
+        // tạo header cho Navigation View
         if (profile != null) {
-            userimg.setImageURI(profile.getProfilePictureUri(50, 50));
-            id.setText(profile.getId());
+            View v = LayoutInflater.from(this).inflate(R.layout.activity_header_navigation, null);
+            userimg = (ImageView) v.findViewById(R.id.header_image);
+            userid = (TextView) v.findViewById(R.id.header_id);
+            username = (TextView) v.findViewById(R.id.header_name);
+            userimg.setImageResource(R.mipmap.navigation_logo_2);
+            userid.setText(profile.getId());
             username.setText(profile.getName());
+            navigationView.addHeaderView(v);
         }
+        // tạo sự kiện click cho Navigation event
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                if (menuItem.getItemId() == R.id.nav_dangxuat) {
+                    LoginManager.getInstance().logOut();
+                    drawerLayout.closeDrawer(navigationView);
+                    setResult(1);
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            }
+        });
     }
 
     // set Taplayout
@@ -128,19 +136,9 @@ public class GiaodienActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_giaodien, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            if (drawerLayout.isDrawerOpen(linearLayout)) {
-                drawerLayout.closeDrawer(linearLayout);
-            } else {
-                drawerLayout.openDrawer(linearLayout);
-            }
+            drawerLayout.openDrawer(navigationView);
         }
         return super.onOptionsItemSelected(item);
     }

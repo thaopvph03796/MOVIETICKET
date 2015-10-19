@@ -1,15 +1,13 @@
 package fragment_page;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.dotplays.dotcashs.R;
@@ -17,12 +15,13 @@ import com.dotplays.dotcashs.R;
 import java.util.ArrayList;
 
 import adapter.AdapterDoiqua;
-import model.ModelDoiqua;
+import model.ModelDoiquaChild;
+import model.ModelDoiquaGroup;
 
 public class DoiquaFragment extends Fragment {
     private Activity a;
-    private ListView lv;
-    private ArrayList<ModelDoiqua> arr;
+    private ExpandableListView lv;
+    private ArrayList<ModelDoiquaChild> children;
     private AdapterDoiqua adapter;
 
     @Override
@@ -39,12 +38,13 @@ public class DoiquaFragment extends Fragment {
     }
 
     public void setListview() {
-        arr = new ArrayList<ModelDoiqua>();
-        arr.add(new ModelDoiqua(R.mipmap.viettel_logo, "Thẻ Viettel"));
-        arr.add(new ModelDoiqua(R.mipmap.vinaphone_logo, "Thẻ Vinaphone"));
-        arr.add(new ModelDoiqua(R.mipmap.mobifone_logo, "Thẻ Mobifone"));
-        lv = (ListView) a.findViewById(R.id.lv_doiqua);
-        adapter = new AdapterDoiqua(getActivity(), R.layout.activity_doiqua_item, arr);
+        String[] group = getResources().getStringArray(R.array.group_name);
+        children = new ArrayList<ModelDoiquaChild>();
+        children.add(new ModelDoiquaChild("Thẻ Viettel 10.000", "-1000xu"));
+        children.add(new ModelDoiquaChild("Thẻ Viettel 50.000", "-5000xu"));
+        children.add(new ModelDoiquaChild("Thẻ Viettel 100.000", "-10000xu"));
+        lv = (ExpandableListView) a.findViewById(R.id.lv_doiqua);
+        adapter = new AdapterDoiqua(getContext(), group, children);
         lv.setAdapter(adapter);
     }
 
